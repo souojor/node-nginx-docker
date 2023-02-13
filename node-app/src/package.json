@@ -1,0 +1,23 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souojor/node-nginx-docker.git"
+  },
+  "author": "Jorlano D S Pereira (souojor@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/souojor/node-nginx-docker/issues"
+  },
+  "homepage": "https://github.com/souojor/node-nginx-docker#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  }
+}

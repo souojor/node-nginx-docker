@@ -1,2 +1,6 @@
 # node-nginx-docker
-Docker, NodeJs Express and Nginx integration.
+Docker, NodeJs Express, Mysql and Nginx integration.
+
+Build and run:
+
+docker-compose up -d
