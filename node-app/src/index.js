@@ -37,6 +37,10 @@ app.get('/', (req, res) => {
   connection.end()
 })
 
+app.get('/healthcheck', (req, res) => {
+  res.status(200).send('Status: OK')
+})
+
 app.listen(port, () => {
     console.log('Rodando na porta ' + port)
 })

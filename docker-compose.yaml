@@ -29,6 +29,11 @@ services:
       - ./node-app/src:/usr/src/app
       - node_modules:/usr/src/app/node_modules
     tty: true
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/healthcheck"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
     depends_on:
       - db
   
@@ -43,6 +48,9 @@ services:
       - nodenet
     ports:
       - "8080:80"
+    depends_on:
+      app:
+        condition: service_healthy
 
 networks:
   nodenet:
