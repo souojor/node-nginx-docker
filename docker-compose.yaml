@@ -27,6 +27,7 @@ services:
       - nodenet
     volumes:
       - ./node-app/src:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
     tty: true
     depends_on:
       - db
@@ -47,7 +48,9 @@ networks:
   nodenet:
     driver: bridge
 
+volumes:
+  node_modules:
+
 #docker-compose up -d
 #docker-compose down
-
 #docker-compose up -d --build
